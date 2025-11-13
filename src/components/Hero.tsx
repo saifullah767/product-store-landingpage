@@ -98,7 +98,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur-3xl opacity-20 transform scale-95" />
             <div className="relative bg-white rounded-2xl shadow-2xl p-4 border border-gray-200">
               <ImageWithFallback
-                src="dashboard.png"
+                src="/dashboard.png"
                 alt="StoreBuilder Dashboard"
                 className="rounded-xl w-full"
               />
@@ -109,7 +109,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur-3xl opacity-20 transform scale-95" />
             <div className="relative bg-white rounded-2xl shadow-2xl p-4 border border-gray-200">
               <ImageWithFallback
-                src="Screenshot 2025-11-11 231824.png"
+                src="/Screenshot 2025-11-11 231824.png"
                 alt="StoreBuilder Dashboard"
                 className="rounded-xl w-full"
               />
@@ -123,7 +123,7 @@ export function Hero() {
               <div className="relative bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
                 <div className="p-2">
                   <ImageWithFallback
-                    src="create-product.png"
+                    src="/create-product.png"
                     alt="Product Management"
                     className="rounded-lg w-full"
                   />
@@ -139,7 +139,7 @@ export function Hero() {
               <div className="relative bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
                 <div className="p-2">
                   <ImageWithFallback
-                    src="tag-creation.png"
+                    src="/tag-creation.png"
                     alt="Product Catalog"
                     className="rounded-lg w-full"
                   />
@@ -155,7 +155,7 @@ export function Hero() {
               <div className="relative bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
                 <div className="p-2">
                   <ImageWithFallback
-                    src="domain-setting.png"
+                    src="/domain-setting.png"
                     alt="Mobile Shopping"
                     className="rounded-lg w-full"
                   />
