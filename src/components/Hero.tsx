@@ -49,7 +49,7 @@ export function Hero() {
           
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl text-gray-900 leading-tight">
-            Build Your Dream Store.
+            Online Store Builder For Businesses.
             <br />
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Start Selling Today.
