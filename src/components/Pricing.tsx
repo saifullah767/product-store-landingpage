@@ -1,4 +1,4 @@
-import { Button } from "./ui/button";
+﻿import { Button } from "./ui/button";
 import { Check, Sparkles, Zap } from "lucide-react";
 import { Badge } from "./ui/badge";
 
@@ -18,32 +18,11 @@ const plans = [
   //   cta: "Start Free",
   //   highlighted: false,
   // },
-  {
-    name: "Early Access",
-    originalPrice: "$800",
-    price: "$500",
-    period: "lifetime",
-    description: "Limited time offer - Lock in forever",
-    badge: "Save $300",
-    features: [
-      "Unlimited products",
-      "Advanced tagging & categories",
-      "Custom branding (no StoreBuilder logo)",
-      "Priority support",
-      "Advanced analytics",
-      "SEO optimization tools",
-      "Early access to all new features",
-      "Lifetime updates",
-      "Custom domain support (coming soon)",
-      "Premium themes (coming soon)",
-    ],
-    cta: "Claim Early Access",
-    highlighted: true,
-  },
+  
   {
     name: "Regular Price",
-    price: "$800",
-    period: "lifetime",
+    price: "800 PKR",
+    period: "month",
     description: "Full access to all features",
     features: [
       "Unlimited products",
@@ -59,11 +38,35 @@ const plans = [
     highlighted: false,
     comingSoon: true,
   },
+  {
+    name: "Early Access",
+    originalPrice: "800 PKR",
+    price: "500 PKR",
+    period: "month",
+    description: "Limited time offer - Lock in forever",
+    badge: "Save 300 PKR",
+    features: [
+      "Unlimited products",
+      "Advanced tagging & categories",
+      "Custom branding (no StoreBuilder logo)",
+      "Priority support",
+      "Advanced analytics",
+      "SEO optimization tools",
+      "Early access to all new features",
+      "Lifetime updates",
+      "Custom domain support (coming soon)",
+      "Premium themes (coming soon)",
+    ],
+    cta: "Claim Early Access",
+    highlighted: true,
+  },
 ];
 
 export function Pricing() {
   return (
     <section id="pricing" className="py-24 bg-gradient-to-b from-blue-50 to-white">
+
+
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full mb-4">
@@ -79,7 +82,7 @@ export function Pricing() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -175,7 +178,7 @@ export function Pricing() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-gray-600">
-            All plans include 7-day money-back guarantee • No credit card required for free plan
+            All plans include a 7-day money-back guarantee - no credit card required for the free plan
           </p>
         </div>
       </div>

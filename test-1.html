@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Launch Countdown</title>
+  <style>
+    :root {
+      --indigo: #6366f1;
+      --purple: #a855f7;
+      --text-dark: #0f172a;
+      --text-muted: #6b7280;
+      --bg-soft: #f9fafb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #f9e0ff 0, #f9fafb 55%);
+      color: var(--text-dark);
+    }
+
+    .sticky-banner {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: linear-gradient(90deg, #111827, #020617);
+      color: #e5e7eb;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.35);
+    }
+
+    .sticky-banner-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.55rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      font-size: 0.8rem;
+    }
+
+    .sticky-banner-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .sticky-banner-title {
+      font-weight: 500;
+    }
+
+    .sticky-banner-sub {
+      color: #9ca3af;
+      font-size: 0.72rem;
+    }
+
+    .sticky-banner-timer {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+    }
+
+    .sticky-time-group {
+      display: flex;
+      align-items: baseline;
+      gap: 0.2rem;
+    }
+
+    .sticky-time-value {
+      font-variant-numeric: tabular-nums;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #f9fafb;
+    }
+
+    .sticky-time-label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.62rem;
+      color: #9ca3af;
+    }
+
+    .sticky-banner-cta {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .sticky-banner-cta {
+        display: inline-flex;
+      }
+    }
+
+    .page-wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .countdown-section {
+      max-width: 960px;
+      width: 100%;
+      background: #ffffffd9;
+      border-radius: 24px;
+      box-shadow: 0 28px 90px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+      padding: 2.5rem 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .countdown-section {
+        padding: 2.75rem 3rem;
+      }
+    }
+
+    .countdown-heading-small {
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #6b7280;
+      font-weight: 600;
+    }
+
+    .countdown-heading-main {
+      margin-top: 0.75rem;
+      font-size: clamp(1.9rem, 2.6vw + 1rem, 2.6rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--text-dark);
+    }
+
+    .countdown-heading-main span.accent {
+      background: linear-gradient(90deg, var(--indigo), var(--purple));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .countdown-description {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .timer-card {
+      margin-top: 1.5rem;
+      background: #020617;
+      border-radius: 18px;
+      padding: 1.1rem 1.2rem;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+      color: #e5e7eb;
+    }
+
+    .timer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.75rem;
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: 500;
+    }
+
+    .timer-box {
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 0.55rem 0.35rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .timer-value {
+      font-variant-numeric: tabular-nums;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #f9fafb;
+    }
+
+    .timer-label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.65rem;
+      color: #9ca3af;
+    }
+
+    .countdown-cta {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-gradient {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background-image: linear-gradient(90deg, var(--indigo), var(--purple));
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0 18px 40px rgba(99, 102, 241, 0.4);
+      text-decoration: none;
+      transition: filter 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn-gradient:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    .cta-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky top countdown banner -->
+  <div class="sticky-banner">
+    <div class="sticky-banner-inner">
+      <div class="sticky-banner-text">
+        <span class="sticky-banner-title">Launch offer ends soon</span>
+        <span class="sticky-banner-sub">Pay only Rs 500/mo for your first 3 months.</span>
+      </div>
+      <div class="sticky-banner-timer">
+        <div class="sticky-time-group">
+          <span id="banner-days" class="sticky-time-value">00</span>
+          <span class="sticky-time-label">Days</span>
+        </div>
+        <div class="sticky-time-group">
+          <span id="banner-hours" class="sticky-time-value">00</span>
+          <span class="sticky-time-label">Hours</span>
+        </div>
+        <div class="sticky-time-group">
+          <span id="banner-minutes" class="sticky-time-value">00</span>
+          <span class="sticky-time-label">Min</span>
+        </div>
+        <div class="sticky-time-group">
+          <span id="banner-seconds" class="sticky-time-value">00</span>
+          <span class="sticky-time-label">Sec</span>
+        </div>
+      </div>
+      <a href="#pricing" class="btn-gradient sticky-banner-cta">
+        Get early access
+      </a>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+    <section class="countdown-section">
+      <div class="countdown-heading-small">Launch Countdown</div>
+
+      <h1 class="countdown-heading-main">
+        Your Store Launches In
+        <span class="accent">Real Time.</span>
+      </h1>
+
+      <p class="countdown-description">
+        Lock your early-bird offer now. Pay only Rs 500/mo for your first 3 months
+        and be ready to start selling the moment your Product-Store goes live.
+      </p>
+
+      <!-- Timer -->
+      <div class="timer-card">
+        <div class="timer-grid">
+          <div class="timer-box">
+            <span id="days" class="timer-value">00</span>
+            <span class="timer-label">Days</span>
+          </div>
+          <div class="timer-box">
+            <span id="hours" class="timer-value">00</span>
+            <span class="timer-label">Hours</span>
+          </div>
+          <div class="timer-box">
+            <span id="minutes" class="timer-value">00</span>
+            <span class="timer-label">Minutes</span>
+          </div>
+          <div class="timer-box">
+            <span id="seconds" class="timer-value">00</span>
+            <span class="timer-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="countdown-cta">
+        <a href="#pricing" class="btn-gradient">
+          Get early access
+          <span>↗</span>
+        </a>
+        <span class="cta-note">
+          No coding. No complexity. Just add products &amp; start selling.
+        </span>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // CHANGE THIS to your actual launch date/time
+    const targetDate = new Date("2025-12-15T00:00:00").getTime();
+
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+
+    const bannerDaysEl = document.getElementById("banner-days");
+    const bannerHoursEl = document.getElementById("banner-hours");
+    const bannerMinutesEl = document.getElementById("banner-minutes");
+    const bannerSecondsEl = document.getElementById("banner-seconds");
+
+    function pad(num) {
+      return num.toString().padStart(2, "0");
+    }
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        daysEl.textContent = "00";
+        hoursEl.textContent = "00";
+        minutesEl.textContent = "00";
+        secondsEl.textContent = "00";
+
+        if (bannerDaysEl && bannerHoursEl && bannerMinutesEl && bannerSecondsEl) {
+          bannerDaysEl.textContent = "00";
+          bannerHoursEl.textContent = "00";
+          bannerMinutesEl.textContent = "00";
+          bannerSecondsEl.textContent = "00";
+        }
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysEl.textContent = pad(days);
+      hoursEl.textContent = pad(hours);
+      minutesEl.textContent = pad(minutes);
+      secondsEl.textContent = pad(seconds);
+
+      if (bannerDaysEl && bannerHoursEl && bannerMinutesEl && bannerSecondsEl) {
+        bannerDaysEl.textContent = pad(days);
+        bannerHoursEl.textContent = pad(hours);
+        bannerMinutesEl.textContent = pad(minutes);
+        bannerSecondsEl.textContent = pad(seconds);
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
+
