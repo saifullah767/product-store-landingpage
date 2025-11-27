@@ -30,8 +30,8 @@ const steps = [
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
             Launch Your Store in 4 Simple Steps
           </h2>
@@ -44,12 +44,12 @@ export function HowItWorks() {
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center text-xl">
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-sky-500 text-white rounded-xl flex items-center justify-center text-xl">
                   {step.step}
                 </div>
                 
-                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 mt-4">
-                  <step.icon className="h-8 w-8 text-blue-600" />
+                <div className="w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center mb-6 mt-4">
+                  <step.icon className="h-8 w-8 text-sky-500" />
                 </div>
                 
                 <h3 className="text-xl text-gray-900 mb-3">{step.title}</h3>

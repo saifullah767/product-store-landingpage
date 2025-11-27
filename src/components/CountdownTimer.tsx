@@ -43,7 +43,7 @@ export function CountdownTimer() {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50 bg-gradient-to-r from-indigo-600 to-purple-600 border-b border-indigo-700 shadow-lg">
+    <div className="sticky top-0 z-50 bg-gradient-to-br from-[#2965F1] to-sky-400 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           {/* Left side - Compelling text */}
@@ -57,7 +57,7 @@ export function CountdownTimer() {
           <div className="flex items-center gap-3 sm:gap-4">
             <div className="flex items-center gap-1 sm:gap-2">
               <div className="text-center">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2 min-w-[44px] sm:min-w-[56px]">
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1">
                   <div className="text-white tabular-nums text-lg sm:text-2xl">
                     {String(timeLeft.days).padStart(2, '0')}
                   </div>
@@ -66,7 +66,7 @@ export function CountdownTimer() {
               </div>
               <div className="text-white/60 text-lg sm:text-2xl pb-4">:</div>
               <div className="text-center">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2 min-w-[44px] sm:min-w-[56px]">
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1">
                   <div className="text-white tabular-nums text-lg sm:text-2xl">
                     {String(timeLeft.hours).padStart(2, '0')}
                   </div>
@@ -75,7 +75,7 @@ export function CountdownTimer() {
               </div>
               <div className="text-white/60 text-lg sm:text-2xl pb-4">:</div>
               <div className="text-center">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2 min-w-[44px] sm:min-w-[56px]">
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1">
                   <div className="text-white tabular-nums text-lg sm:text-2xl">
                     {String(timeLeft.minutes).padStart(2, '0')}
                   </div>
@@ -84,7 +84,7 @@ export function CountdownTimer() {
               </div>
               <div className="text-white/60 text-lg sm:text-2xl pb-4">:</div>
               <div className="text-center">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1 sm:py-2 min-w-[44px] sm:min-w-[56px]">
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1">
                   <div className="text-white tabular-nums text-lg sm:text-2xl">
                     {String(timeLeft.seconds).padStart(2, '0')}
                   </div>

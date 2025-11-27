@@ -64,9 +64,7 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-gradient-to-b from-blue-50 to-white">
-
-
+    <section id="pricing" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full mb-4">
@@ -88,7 +86,7 @@ export function Pricing() {
               key={index}
               className={`relative rounded-3xl p-8 ${
                 plan.highlighted
-                  ? "bg-gradient-to-br from-blue-600 to-purple-600 text-white shadow-2xl scale-105 border-4 border-orange-400"
+                  ? "bg-gradient-to-br from-[#2965F1] to-sky-400 text-white shadow-2xl scale-105 border-4 border-orange-400"
                   : "bg-white border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg"
               } transition-all duration-300`}
             >
@@ -147,7 +145,7 @@ export function Pricing() {
                 className={`w-full mb-8 ${
                   plan.highlighted
                     ? "bg-white text-blue-600 hover:bg-gray-100"
-                    : "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700"
+                    : "bg-gradient-to-r from-[#2965F1] to-sky-400 text-white hover:from-blue-700 hover:to-purple-700"
                 }`}
                 disabled={plan.comingSoon}
               >

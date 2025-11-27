@@ -3,29 +3,23 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000" />
-        <div className="absolute top-40 left-40 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000" />
-      </div>
+    <section className="relative overflow-hidden bg-gray-900 text-white">
       {/* Hero Content */}
       <div className="relative container mx-auto px-4 pt-16 pb-24 md:pt-24 md:pb-32">
         <div className="text-center max-w-5xl mx-auto space-y-8 mb-16">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl text-gray-900 leading-tight">
+          <h1 className="text-5xl md:text-7xl leading-tight">
             Online Store Builder For Businesses.
             <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#2965F1] to-sky-400 bg-clip-text text-transparent">
               Start Selling Today.
             </span>
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
             No coding. No complexity. Just add products, tag them, and watch your sales grow. 
-            Your professional online store is <span className="text-purple-600">ready in 5 minutes</span>.
+            Your professional online store is <span className="text-sky-400">ready in 5 minutes</span>.
           </p>
           
           {/* CTA Buttons */}
@@ -41,7 +35,7 @@ export function Hero() {
           </div> */}
           
           {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-sm text-gray-600">
+          <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-sm text-gray-200">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-5 w-5 text-green-500" />
               <span>Free 7-day trial</span>

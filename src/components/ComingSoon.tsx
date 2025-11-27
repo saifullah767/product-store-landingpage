@@ -28,17 +28,11 @@ const upcomingFeatures = [
 export function ComingSoon() {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20" />
-      </div>
-
       <div className="container mx-auto px-4 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 border border-purple-200 px-4 py-2 rounded-full mb-6">
-            <Sparkles className="h-4 w-4 text-purple-600" />
-            <span className="text-sm text-purple-700">Roadmap Preview</span>
+          <div className="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-200 px-4 py-2 rounded-full mb-6">
+            {/* <Sparkles className="h-4 w-4 text-sky-600" /> */}
+            <span className="text-sm text-yellow-700">Roadmap Preview</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
