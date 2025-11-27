@@ -8,7 +8,7 @@ export function ProductFeatures(props: { direction?: 'left' | 'right' }) {
   const isRight = direction === "right";
   
   return (
-      <section className="container mx-auto max-w-7xl ">
+      <section className="container mx-auto max-w-7xl sm:px-0 px-4">
          <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
             Bring Your Storefront to Life
