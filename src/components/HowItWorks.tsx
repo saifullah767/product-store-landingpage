@@ -44,9 +44,9 @@ export function HowItWorks() {
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-sky-500 text-white rounded-xl flex items-center justify-center text-xl">
+                {/* <div className="absolute -top-4 -left-4 w-12 h-12 bg-sky-500 text-white rounded-xl flex items-center justify-center text-xl">
                   {step.step}
-                </div>
+                </div> */}
                 
                 <div className="w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center mb-6 mt-4">
                   <step.icon className="h-8 w-8 text-sky-500" />

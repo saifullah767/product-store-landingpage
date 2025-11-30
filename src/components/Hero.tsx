@@ -9,12 +9,21 @@ export function Hero() {
         <div className="text-center max-w-5xl mx-auto space-y-8 mb-16">
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl leading-tight">
-            Online Store Builder For Businesses.
-            <br />
-            <span className="bg-gradient-to-r from-[#2965F1] to-sky-400 bg-clip-text text-transparent">
-              Start Selling Today.
-            </span>
+              Start 
+              <span className="font-medium bg-gradient-to-r from-[#2965F1] to-sky-400 bg-clip-text text-transparent"> Earning </span> 
+              Today.
           </h1>
+          <h2 className="text-3xl md:text-3xl font-light text-gray-300">
+            Online Store Builder For Businesses.
+          </h2>
+
+          <a
+              href="javascript:void(0)"
+              className="max-w-xs mx-auto block open-access-modal rounded-lg bg-slate-100 hover:bg-slate-200 text-gray-800 px-3 py-2.5 text-lg font-semibold"
+          >
+              <img src="/logo-dark.svg" alt="" className="inline-block mr-2 h-6 w-6" />
+              Start Free Trial
+          </a>
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
