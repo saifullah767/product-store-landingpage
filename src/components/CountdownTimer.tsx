@@ -50,7 +50,7 @@ export function CountdownTimer() {
           {/* Left side - Compelling text */}
           <div className="flex-1 text-center sm:text-left">
             <p className="text-white">
-              <span className="font-semibold">🎉 Early Bird Special!</span> Lock in <span className="font-semibold">$300 OFF</span> the regular price — Limited time offer ending December 30th!
+              <span className="font-semibold">🎉 Early Bird Special!</span> Lock in <span className="font-semibold">PKR: 500</span> off the regular price — Limited time offer ending December 30th!
             </p>
           </div>
 

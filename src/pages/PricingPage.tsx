@@ -19,7 +19,7 @@ export function PricingPage() {
         </div>
       </section> */}
       <Pricing />
-      <div className="container flex mx-auto max-w-7xl px-4 space-y-12">
+      <div className="container mx-auto max-w-7xl px-4 space-y-12 flex">
         <div className="px-4 text-lg space-y-6">
           <p className="text-gray-400 font-bold">
             Explore Product-Store with confidence — 7 days, zero pressure.
@@ -47,7 +47,7 @@ export function PricingPage() {
             Let’s build something amazing together.
           </p>
         </div>
-        <img src="/guy-image.jpg" className="size-[400px]" alt="Description of image" />
+        <img src="/guy-image.jpg" className="size-[400px] hidden sm:block" alt="Description of image" />
       </div>
       {/* <FinalCTA /> */}
     </div>
