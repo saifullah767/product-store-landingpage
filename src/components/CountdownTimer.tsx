@@ -17,9 +17,10 @@ export function CountdownTimer() {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const launchDate = new Date("2024-12-15T00:00:00").getTime();
-      const now = new Date().getTime();
-      const difference = launchDate - now;
+      const now = new Date();
+      const thisYearTarget = new Date(now.getFullYear(), 11, 30, 23, 59, 59, 999);
+      const targetDate = now > thisYearTarget ? new Date(now.getFullYear() + 1, 11, 30, 23, 59, 59, 999) : thisYearTarget;
+      const difference = targetDate.getTime() - now.getTime();
 
       if (difference > 0) {
         return {
@@ -49,7 +50,7 @@ export function CountdownTimer() {
           {/* Left side - Compelling text */}
           <div className="flex-1 text-center sm:text-left">
             <p className="text-white">
-              <span className="font-semibold">🎉 Early Bird Special!</span> Lock in <span className="font-semibold">$300 OFF</span> the regular price — Limited time offer ending December 15th!
+              <span className="font-semibold">🎉 Early Bird Special!</span> Lock in <span className="font-semibold">$300 OFF</span> the regular price — Limited time offer ending December 30th!
             </p>
           </div>
 

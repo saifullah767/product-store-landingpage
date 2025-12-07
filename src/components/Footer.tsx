@@ -2,9 +2,9 @@ import { Sparkles, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-16">
+    <footer className="bg-gray-900 text-gray-300 py-4">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        {/* <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Sparkles className="h-8 w-8 text-blue-400" />
@@ -58,15 +58,15 @@ export function Footer() {
               <li><a href="#" className="hover:text-white transition-colors">Community</a></li>
             </ul>
           </div>
-        </div>
+        </div> */}
         
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>&copy; 2025 StoreBuilder. All rights reserved.</p>
-          <div className="flex gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+          <p>&copy; 2025 Product<span className="text-emerald-400 font-semibold">Cart</span>. All rights reserved.</p>
+          {/* <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

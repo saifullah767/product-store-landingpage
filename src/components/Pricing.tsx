@@ -86,13 +86,13 @@ export function Pricing() {
               key={index}
               className={`relative rounded-3xl p-8 ${
                 plan.highlighted
-                  ? "bg-gradient-to-br from-[#2965F1] to-sky-400 text-white shadow-2xl scale-105 border-4 border-orange-400"
-                  : "bg-white border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg"
+                  ? "bg-white text-white- shadow-2xl scale-105 border-4 border-emerald-400"
+                  : " bg-slate-200 border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg"
               } transition-all duration-300`}
             >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <Badge className="bg-orange-500 text-white px-4 py-1 text-sm hover:bg-orange-500">
+                  <Badge className="bg-emerald-500 text-white px-4 py-1 text-sm hover:bg-emerald-500">
                     <Sparkles className="h-3 w-3 mr-1" />
                     Best Value
                   </Badge>
@@ -107,34 +107,34 @@ export function Pricing() {
                 </div>
               )}
 
-              {plan.badge && (
+              {/* {plan.badge && (
                 <div className="mb-4">
                   <Badge className="bg-orange-500 text-white hover:bg-orange-500">
                     {plan.badge}
                   </Badge>
                 </div>
-              )}
+              )} */}
               
               <div className="mb-6">
-                <h3 className={`text-2xl mb-2 ${plan.highlighted ? "text-white" : "text-gray-900"}`}>
+                <h3 className={`text-2xl mb-2 ${plan.highlighted ? "text-gray-800" : "text-gray-900"}`}>
                   {plan.name}
                 </h3>
-                <p className={`text-sm ${plan.highlighted ? "text-blue-100" : "text-gray-600"}`}>
+                <p className={`text-sm`}>
                   {plan.description}
                 </p>
               </div>
               
               <div className="mb-6">
                 {plan.originalPrice && (
-                  <div className={`text-2xl line-through ${plan.highlighted ? "text-blue-200" : "text-gray-400"} mb-1`}>
+                  <div className={`text-2xl line-through text-gray-400 mb-1`}>
                     {plan.originalPrice}
                   </div>
                 )}
                 <div className="flex items-baseline gap-2">
-                  <span className={`text-5xl ${plan.highlighted ? "text-white" : "text-gray-900"}`}>
+                  <span className={`text-5xl font-semibold ${plan.highlighted ? "text-gray-800" : "text-gray-900"}`}>
                     {plan.price}
                   </span>
-                  <span className={`text-lg ${plan.highlighted ? "text-blue-100" : "text-gray-600"}`}>
+                  <span className={`text-lg `}>
                     /{plan.period}
                   </span>
                 </div>
@@ -144,8 +144,8 @@ export function Pricing() {
                 size="lg"
                 className={`w-full mb-8 ${
                   plan.highlighted
-                    ? "bg-white text-blue-600 hover:bg-gray-100"
-                    : "bg-gradient-to-r from-[#2965F1] to-sky-400 text-white hover:from-blue-700 hover:to-purple-700"
+                    ? "bg-slate-800 text-white open-access-modal"
+                    : "bg-slate-400 text-gray-900"
                 }`}
                 disabled={plan.comingSoon}
               >
@@ -155,16 +155,10 @@ export function Pricing() {
               <ul className="space-y-4">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
-                    <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                      plan.highlighted 
-                        ? "bg-white/20" 
-                        : "bg-green-100"
-                    }`}>
-                      <Check className={`h-3 w-3 ${
-                        plan.highlighted ? "text-white" : "text-green-600"
-                      }`} />
+                    <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-green-100`}>
+                      <Check className={`h-3 w-3 text-green-600`} />
                     </div>
-                    <span className={`text-sm ${plan.highlighted ? "text-blue-50" : "text-gray-700"}`}>
+                    <span className={`text-sm text-gray-700`}>
                       {feature}
                     </span>
                   </li>

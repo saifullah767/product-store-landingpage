@@ -49,7 +49,7 @@ export function PricingPage() {
         </div>
         <img src="/guy-image.jpg" className="size-[400px]" alt="Description of image" />
       </div>
-      <FinalCTA />
+      {/* <FinalCTA /> */}
     </div>
   );
 }

@@ -13,8 +13,9 @@ import {
 
 const nav_links = [
   { name: "Home", href: "/" },
+  { name: "Features", href: "/features" },
   { name: "Pricing", href: "/pricing" },
-  { name: "About", href: "/about" },
+//   { name: "About", href: "/about" },
   { name: "Our Aim", href: "/our-aim" },
 ];
 

@@ -50,10 +50,10 @@ export function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300"
+              className="p-8 flex flex-col items-center transition-all duration-300 text-center"
             >
-              <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
-                <feature.icon className="h-6 w-6 text-sky-600" />
+              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                <feature.icon className="h-6 w-6 text-emerald-600" />
               </div>
               <h3 className="text-xl text-gray-900 mb-3">{feature.title}</h3>
               <p className="text-gray-600 leading-relaxed">{feature.description}</p>

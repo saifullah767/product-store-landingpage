@@ -80,21 +80,6 @@ export function ComingSoon() {
             </div>
           ))}
         </div>
-
-        {/* Additional info */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex flex-col items-center gap-4 bg-gradient-to-br from-blue-50 to-purple-50 border border-purple-200 rounded-2xl p-8 max-w-2xl mx-auto">
-            <p className="text-gray-900">
-              Want early access to new features?
-            </p>
-            <p className="text-sm text-gray-600">
-              Join our beta program and be the first to test upcoming features. Provide feedback and shape the future of StoreBuilder.
-            </p>
-            {/* <button className="mt-2 text-sm bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all">
-              Join Beta Program
-            </button> */}
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -48,17 +48,17 @@ export function HowItWorks() {
                   {step.step}
                 </div> */}
                 
-                <div className="w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center mb-6 mt-4">
-                  <step.icon className="h-8 w-8 text-sky-500" />
+                <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 mt-4">
+                  <step.icon className="h-8 w-8 text-emerald-500" />
                 </div>
                 
                 <h3 className="text-xl text-gray-900 mb-3">{step.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{step.description}</p>
               </div>
               
-              {index < steps.length - 1 && (
+              {/* {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-px bg-gray-300" />
-              )}
+              )} */}
             </div>
           ))}
         </div>

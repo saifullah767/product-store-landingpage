@@ -18,62 +18,77 @@ export function Layout() {
       </main>
 
         <div className="sr-only">
-          <div className="ps-access-overlay fixed inset-0 bg-slate-900/80 opacity-0 pointer-events-none flex items-center justify-center transition duration-200 ease-out z-[9997]">
-
-          </div>
-           <div className="relative w-full sm:max-w-[600px] mx-5 rounded-md shadow-xl border border-slate-200 bg-purple-50">
-                <button className="absolute right-4 top-3 text-xs font-semibold text-slate-400 hover:text-slate-600 ps-access-close" aria-label="Close" >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x-icon lucide-x size-6"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <div className="ps-access-overlay fixed inset-0 bg-slate-900/80 opacity-0 pointer-events-none flex items-center justify-center transition duration-200 ease-out z-[9997]">
+            <div 
+                className="relative w-full max-w-5xl overflow-hidden rounded-lg bg-white shadow-2xl"
+            >
+                <button
+                    type="button"
+                    className="absolute ps-access-close right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/80 text-slate-500 shadow-sm hover:bg-slate-50 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-300"
+                    aria-label="Close access popup"
+                >
+                ✕
                 </button>
 
-                <div className="px-10 pt-10 pb-6 text-center">
+                <div className="grid md:grid-cols-2 grid-cols-1 dark:text-white">
+                    <div></div>
 
-                    <div className="mx-auto mb-4 h-10 w-10 rounded-md bg-purple-600 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-store-icon lucide-store text-white size-7"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"/><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"/><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"/></svg>
-                    </div>
-
-                    <span className="inline-flex items-center gap-x-0.5 rounded-md bg-green-50 px-2 py-1 text-xs text-green-700 inset-ring inset-ring-green-600/20">
-                        Earlybird Access
-                    </span>
-
-                    <h2 className="text-lg font-semibold text-slate-900 my-4">
-                        Get Early Access & Launch Your Online Store to Boost Sales!
-                    </h2>
-                    <form className="text-left space-y-3 ps-access-form">
-                        <div>
-                        <label className="block text-xs font-semibold text-slate-700 mb-1">
-                            Name
-                        </label>
-                        <input
-                            name="name" type="text" placeholder="Your name" required
-                            className="w-full rounded-sm border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                        />
-                        </div>
-                        <div>
-                        <label className="block text-xs font-semibold text-slate-700 mb-1">
-                            Email Address
-                        </label>
-                        <input
-                            name="email" type="email" placeholder="you@example.com"
-                            className="w-full rounded-sm border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                        />
+                    <div className="dark:bg-slate-900 bg-white px-6 py-4">
+                        <div className="flex flex-col gap-3">
+                            <div className="inline-flex items-center gap-2 text-lg font-semibold">
+                                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500">
+                                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a1 1 0 0 0 .99.81h11.72a1 1 0 0 0 .98-.79L23 6H6"></path>
+                                    </svg>
+                                </div>
+                                <span className="font-semibold">Product<span className="text-emerald-500">Cart</span></span>
+                            </div>
                         </div>
 
-                        <div className="flex items-center justify-center w-full mt-4">
-                            <button type="submit" className="w-1/2 rounded-sm bg-purple-600 cursor-pointer text-white text-sm font-medium py-2 hover:bg-purple-700" > 
-                                Get Owner Access 
+                        <h2 className="mt-4 text-2xl sm:text-3xl font-semibold">
+                            Get Access to Your Online Store Dashboard
+                        </h2>
+
+                        <p className="mt-3 text-sm dark:text-slate-300 text-slate-600">
+                            Launch your online store to boost sales.
+                            <br></br>
+                            Fill the form to get
+                            <span className="font-semibold dark:text-emerald-300 text-emerald-600  border-b-2 border-dotted border-emerald-300 pb-0.5">
+                                15 days free access
+                            </span>
+                        </p>
+
+                        <form className="mt-6 space-y-4 ps-access-form">
+                            <div>
+                                <label htmlFor="access-name" className="block text-sm font-medium"> Name </label>
+                                <input type="text" name="name" placeholder="Your name" className="mt-1 block w-full rounded-lg border dark:border-slate-600 border-slate-200 dark:bg-slate-800 bg-slate-100 px-3 py-2.5 text-sm text-slate-50 placeholder-slate-400 outline-none transition focus:border-emerald-400 focus:bg-slate-900 focus:ring-2 focus:ring-emerald-500/40" required />
+                            </div>
+
+                            <div>
+                                <label htmlFor="access-email" className="block text-sm font-medium"> Email Address </label>
+                                <input type="email" name="email" placeholder="you@example.com" className="mt-1 block w-full rounded-lg border dark:border-slate-600 border-slate-200 dark:bg-slate-800 bg-slate-100 px-3 py-2.5 text-sm text-slate-50 placeholder-slate-400 outline-none transition focus:border-emerald-400 focus:bg-slate-900 focus:ring-2 focus:ring-emerald-500/40" required />
+                            </div>
+
+                            <button
+                                type="submit"
+                                className="mt-3 cursor-pointer inline-flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-500 px-4 py-2.5 text-sm font-semibold dark:text-slate-900 text-white transition hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                            >
+                                <span>Get Admin Access</span>
+                                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
                             </button>
 
-                        </div>
-                    </form>
-
-                    <p className="mt-4 text-[10px] text-slate-500">
-                        Limited earlybird spots available — we’ll email you with your access link.
-                    </p>
-
+                            <p className="ps-access-feedback text-xs text-red-500 min-h-[1.25rem] ml-5 mb-5" aria-live="polite"></p>
+                        </form>
+                    </div>
                 </div>
-                <p className="ps-access-feedback text-xs text-red-500 min-h-[1.25rem] ml-5 mb-5" aria-live="polite"></p>
-            </div> 
+            </div>
+            </div>
         </div>
 
       <Footer />
