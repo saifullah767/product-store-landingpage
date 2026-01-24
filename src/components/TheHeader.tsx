@@ -22,7 +22,7 @@ const nav_links = [
 export function TheHeader() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     return (
-        <header className="bg-gray-900 z-50 sticky top-40 sm:top-20">
+        <header className="bg-gray-900 z-50 sticky top-0">
 
             
       {/* <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur">

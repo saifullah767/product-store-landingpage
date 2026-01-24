@@ -50,11 +50,13 @@ export function CountdownTimer() {
           {/* Left side - Compelling text */}
           <div className="flex-1 text-center sm:text-left">
             <p className="text-white">
-              <span className="font-semibold">🎉 Early Bird Special!</span> Lock in <span className="font-semibold">PKR: 500</span> off the regular price — Limited time offer ending December 30th!
+              <span className="font-semibold">🎉 Early Bird Special!</span> Lock in <span className="font-semibold">PKR: 500</span> off the regular price
             </p>
+             {/* — Limited time offer ending December 30th! */}
           </div>
 
           {/* Right side - Countdown */}
+          
           <div className="flex items-center gap-3 sm:gap-4">
             <div className="flex items-center gap-1 sm:gap-2">
               <div className="text-center">
