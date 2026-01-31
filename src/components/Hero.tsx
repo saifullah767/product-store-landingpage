@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-gray-900 text-white">
       <div className="relative container mx-auto px-4 pt-16 pb-24 md:pt-24 md:pb-32">
-        <div className="text-center max-w-5xl mx-auto space-y-8 mb-16">
+        <div className="text-center mx-auto space-y-8 mb-16">
           <h1 className="text-5xl md:text-7xl leading-tight">
               Start 
               <span className="font-medium text-emerald-400"> Earning </span> 
@@ -21,7 +21,11 @@ export function Hero() {
               <img src="/logo-dark.svg" alt="" className="inline-block mr-2 h-6 w-6" />
               Start Free Trial
           </a>
-          
+
+          <div>
+            <img src="/landing-page-hero.gif" alt="Description of the GIF" />
+          </div>
+
           <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
             No coding. No complexity. Just add products, tag them, and watch your sales grow. 
             Your professional online store is <span className="text-emerald-500">ready in 5 minutes</span>.
