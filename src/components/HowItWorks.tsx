@@ -42,7 +42,7 @@ export function HowItWorks() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-2">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative open-access-modal">
               <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 {/* <div className="absolute -top-4 -left-4 w-12 h-12 bg-sky-500 text-white rounded-xl flex items-center justify-center text-xl">
                   {step.step}
