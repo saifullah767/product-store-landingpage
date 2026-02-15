@@ -9,7 +9,7 @@ const features = [
       { label: "Organize with categories", description: "Create categories and assign them to products so customers can find items quickly." },
       { label: "Media upload ready", description: "Upload product images to build a professional product listing experience." },
     ],
-    imageSrc: "/features-img/10.png",
+    imageSrc: "./features-img/10.png",
     imageAlt: "Product Management",
   },
   {
@@ -20,7 +20,7 @@ const features = [
       { label: "Theme that matches your brand", description: "Customize your store’s look with a clean theme editor: Background color, Primary color, Text, heading, and sub-heading colors" },
       { label: "Quick preview while designing", description: "See changes instantly with a live preview (Laptop/Mobile view) so you can confidently publish without guessing." },
     ],
-    imageSrc: "/features-img/11.png",
+    imageSrc: "./features-img/11.png",
     imageAlt: "Store Design & Customization",
   },
   {
@@ -31,7 +31,7 @@ const features = [
       { label: "Theme that matches your brand", description: "Customize your store’s look with a clean theme editor: Background color, Primary color, Text, heading, and sub-heading colors" },
       { label: "Update your store domain", description: "Edit your store link/slug (example: my.product-cart.store/your-store-name) with built-in domain rules, so your URL stays professional, readable, and shareable." },
     ],
-    imageSrc: "/features-img/12.png",
+    imageSrc: "./features-img/12.png",
     imageAlt: "Page Management & WhatsApp Checkout",
   },
   {
@@ -43,7 +43,7 @@ const features = [
     ],
     description:
       "Give your customers a smooth, modern shopping experience from the first click to the final “Add to cart.” Your storefront includes beautifully designed pages that help visitors discover products faster, understand details clearly, and buy with confidence.",
-    imageSrc: "/features-img/13.png",
+    imageSrc: "./features-img/13.png",
     imageAlt: "Store Front Pages",
   },
   {
@@ -56,7 +56,7 @@ const features = [
     ],
     description:
       "A fast, clean checkout experience designed for mobile shoppers. Customers can review their cart, enter delivery details, and place an order in seconds—either through Cash on Delivery (COD) or WhatsApp Checkout for instant confirmation.",
-    imageSrc: "/features-img/14.png",
+    imageSrc: "./features-img/14.png",
     imageAlt: "Store design preview",
   },
 ];
@@ -92,11 +92,12 @@ export function ProductFeatures(props: { direction?: 'left' | 'right' }) {
                   {/* Image */}
                   <div className={isEven ? "sm:order-2" : ""}>
                     <div className="shadow-lg- min-h-[220px] border- border-slate-300- rounded-">
-                      <ImageWithFallback
+                      {/* <ImageWithFallback
                         src={feature.imageSrc}
                         alt={feature.imageAlt}
                         className="rounded-xl w-full h-full object-cover"
-                      />
+                      /> */}
+                      <img src={feature.imageSrc} alt={feature.imageAlt} className="rounded-xl w-full h-full object-cover" />
                     </div>
                   </div>
 
