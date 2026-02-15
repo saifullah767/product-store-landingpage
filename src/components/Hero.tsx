@@ -10,24 +10,29 @@ export function Hero() {
               <span className="font-medium text-emerald-400"> Earning </span> 
               Today.
           </h1>
-          <h2 className="text-3xl md:text-3xl font-light text-gray-300">
-            Online Store Builder For Businesses. <br /> Start earning with a store you’re proud to share.
-          </h2>
 
-          <a
-              href="javascript:void(0)"
-              className="max-w-xs mx-auto block open-access-modal rounded-lg bg-slate-100 hover:bg-slate-200 text-gray-800 px-3 py-2.5 text-lg font-semibold"
+                    {/* <h2 className="text-3xl md:text-3xl font-light text-gray-300">
+            Online Store Builder For Businesses. <br /> Start earning with a store you’re proud to share.
+          </h2> */}
+           <p className="text-3xl md:text-3xl font-light text-gray-300">
+            Create a clean store <span className="font-semibold text-brand-text">in minutes.</span><br className="hidden sm:block" />
+            Add products, organize by categories,<br className="hidden sm:block" />
+            and share your link.
+          </p>
+
+          <button
+              className="open-access-modal mx-auto px-10 block rounded-lg bg-emerald-600 text-white ring-2 ring-emerald-400 px-3 py-2.5 text-lg font-semibold"
           >
               <img src="/logo-dark.svg" alt="" className="inline-block mr-2 h-6 w-6" />
-              Start Free Trial
-          </a>
+              Create My Store <span className="font-normal"> (Free) </span>
+          </button>
 
           <div>
-            <img src="/landing-page-hero.gif" alt="Description of the GIF" />
+            <video src="/store-hero-section-banner-video.mp4" autoPlay muted loop className="w-full mx-auto"></video>
           </div>
 
-          <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-            No coding. No complexity. Just add products, tag them, and watch your sales grow. 
+                    <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
+            No coding. No complexity. Just add products, categories them, and watch your sales grow. 
             Your professional online store is <span className="text-emerald-500">ready in 5 minutes</span>.
           </p>
           
@@ -45,6 +50,14 @@ export function Hero() {
               <span>Cancel anytime</span>
             </div>
           </div>
+
+          {/* <a
+              href="javascript:void(0)"
+              className="max-w-xs mx-auto block open-access-modal rounded-lg bg-slate-100 hover:bg-slate-200 text-gray-800 px-3 py-2.5 text-lg font-semibold"
+          >
+              <img src="/logo-dark.svg" alt="" className="inline-block mr-2 h-6 w-6" />
+              Start Free Trial
+          </a> */}
         </div>
       </div>
     </section>

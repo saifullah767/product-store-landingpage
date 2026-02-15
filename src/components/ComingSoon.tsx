@@ -60,12 +60,12 @@ export function ComingSoon() {
                 </div>
                 
                 {/* Status badge */}
-                <Badge 
+                {/* <Badge 
                   variant="secondary" 
                   className="mb-4 w-fit bg-gray-100 text-gray-700 border border-gray-200"
                 >
                   {feature.status}
-                </Badge>
+                </Badge> */}
                 
                 {/* Content */}
                 <h3 className="text-xl text-gray-900 mb-3">{feature.title}</h3>

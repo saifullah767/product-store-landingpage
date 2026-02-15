@@ -14,6 +14,14 @@ export function Layout() {
 
       <main className="flex-1">
         <Outlet />
+              <div className="sticky bottom-0 z-50 p-3">
+        <button
+            className="open-access-modal mx-auto px-10 block rounded-lg bg-emerald-600 text-white ring-2 ring-emerald-400 px-3 py-2.5 text-lg font-semibold"
+        >
+            <img src="/logo-dark.svg" alt="" className="inline-block mr-2 h-6 w-6" />
+            Create My Store <span className="font-normal"> (Free) </span>
+        </button>
+      </div>
         
       </main>
 

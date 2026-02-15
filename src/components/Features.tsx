@@ -8,8 +8,8 @@ const features = [
   },
   {
     icon: Tags,
-    title: "Smart Tagging System",
-    description: "Organize products with custom tags. Help customers find exactly what they're looking for with powerful categorization.",
+    title: "Smart Categories",
+    description: "Organize products with custom category. Help customers find exactly what they're looking for with powerful categorization.",
   },
   {
     icon: Store,

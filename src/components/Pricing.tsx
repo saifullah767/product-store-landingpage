@@ -19,29 +19,29 @@ const plans = [
   //   highlighted: false,
   // },
   
-  {
-    name: "Regular Price",
-    price: "800 PKR",
-    period: "month",
-    description: "Full access to all features",
-    features: [
-      "Unlimited products",
-      "Advanced tagging & categories",
-      "Custom branding",
-      "Priority support",
-      "Advanced analytics",
-      "SEO optimization tools",
-      "All future features included",
-      "Lifetime updates",
-    ],
-    cta: "Get Started",
-    highlighted: false,
-    comingSoon: true,
-  },
+  // {
+  //   name: "Regular Price",
+  //   price: "800 PKR",
+  //   period: "month",
+  //   description: "Full access to all features",
+  //   features: [
+  //     "Unlimited products",
+  //     "Advanced tagging & categories",
+  //     "Custom branding",
+  //     "Priority support",
+  //     "Advanced analytics",
+  //     "SEO optimization tools",
+  //     "All future features included",
+  //     "Lifetime updates",
+  //   ],
+  //   cta: "Get Started",
+  //   highlighted: false,
+  //   comingSoon: true,
+  // },
   {
     name: "Early Access",
-    originalPrice: "800 PKR",
-    price: "500 PKR",
+    originalPrice: "2000 PKR",
+    price: "1000 PKR",
     period: "month",
     description: "Limited time offer - Lock in forever",
     badge: "Save 300 PKR",
@@ -69,7 +69,7 @@ export function Pricing() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full mb-4">
             <Zap className="h-4 w-4" />
-            <span className="text-sm">Limited Time Offer - 37% Off</span>
+            <span className="text-sm">Limited Time Offer - 50% Off</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
@@ -80,15 +80,16 @@ export function Pricing() {
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {/* grid sm:grid-cols-2 gap-8 max-w-5xl mx-auto */}
+        <div className="flex flex-col items-center">
           {plans.map((plan, index) => (
             <div
               key={index}
               className={`relative rounded-3xl p-8 ${
                 plan.highlighted
-                  ? "bg-white text-white- shadow-2xl scale-105 border-4 border-emerald-400"
+                  ? "bg-white shadow-2xl scale-105 border-4 border-emerald-400"
                   : " bg-slate-200 border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg"
-              } transition-all duration-300`}
+              } transition-all duration-300 max-w-lg w-full`}
             >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
@@ -99,13 +100,13 @@ export function Pricing() {
                 </div>
               )}
 
-              {plan.comingSoon && (
+              {/* {plan.comingSoon && (
                 <div className="absolute top-4 right-4">
                   <Badge variant="secondary" className="bg-gray-100 text-gray-600">
                     Available Later
                   </Badge>
                 </div>
-              )}
+              )} */}
 
               {/* {plan.badge && (
                 <div className="mb-4">
