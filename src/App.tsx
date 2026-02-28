@@ -6,6 +6,7 @@ import { AboutPage } from "./pages/AboutPage";
 import { AimPage } from "./pages/AimPage";
 import { FeaturesPage } from "./pages/FeaturesPage";
 import { ThankyouPage } from './pages/Thankyou';
+import { PageTracking } from "./PageTracking";
 
 function NotFound() {
   return (
@@ -28,16 +29,19 @@ function NotFound() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/features" element={<FeaturesPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/our-aim" element={<AimPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-      <Route path="/thank-you" element={<ThankyouPage />} />
-    </Routes>
+    <>
+      <PageTracking />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/our-aim" element={<AimPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+        <Route path="/thank-you" element={<ThankyouPage />} />
+      </Routes>
+    </>
   );
 }
