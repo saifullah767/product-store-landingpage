@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void;
+    gtag?: (...args: any[]) => void;
   }
 }
 
@@ -23,14 +23,20 @@ export function PageTracking() {
 
   useEffect(() => {
     const pageTitle = pageTitles[location.pathname] ?? "Product Cart";
-
     document.title = pageTitle;
 
-    if (!window.gtag) return;
+    // If gtag isn't available for some reason, just skip.
+    if (!window.gtag) {
+      console.log("gtag not found, skipping page view tracking");
+      return;
+    } 
 
-    window.gtag("config", GA_MEASUREMENT_ID, {
-      page_path: location.pathname + location.search,
+    // Send a GA4 page_view for SPA route changes
+    window.gtag("event", "page_view", {
       page_title: pageTitle,
+      page_path: location.pathname + location.search,
+      page_location: window.location.href,
+      send_to: GA_MEASUREMENT_ID,
     });
   }, [location.pathname, location.search]);
 
